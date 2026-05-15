@@ -11,24 +11,23 @@
 
 var height = 5;
 
-var i = height;
+var line = height;
 
-while (i > 0) {
-    var j = 0;
-    var h = 0;
-    var row = "";
-    while (h < height - i) {
-    	row += "  ";
-        h++;
+while (line > 0) {
+    var asterisks = 0;
+    var space = 0;
+    var out = "";
+    while (space < height - line) {
+    	out += "  ";
+        space++;
     }
     
-    while (j < i) {
-        row += "* ";
-        j++;
+    while (asterisks < line) {
+        out += "* ";
+        asterisks++;
     }
-        //row += "<br>";
 
-    i--;
+    line--;
     
-    console.log(row);
+    console.log(out);
 }

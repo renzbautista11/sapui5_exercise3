@@ -8,23 +8,21 @@
 
 var number = 9999;
 
-// Validation
 if (number < 1 || number > 999 || isNaN(number)) {
-    console.log("Please enter a number between 1 and 999.");
+    console.log("Invalid number! Please enter a number between 1 and 999.");
 } else {
-       
     var converted = "";
     var arrOnes = ["", "One", "Two", "Three", "Four","Five", "Six", "Seven", "Eight", "Nine"];
     var arrTeens = ["Ten", "Eleven", "Twelve", "Thirteen", "Fourteen","Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
     var arrTens = ["", "", "Twenty", "Thirty", "Forty","Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
 
-    // Hundreds place
+    //Check if the number is in the hundreds place
     if (number >= 100) {
         converted += arrOnes[Math.floor(number / 100)] + " Hundred ";
         number = number % 100;
     }
 
-    // Tens and Ones place
+    // get thet tens and ones place
     if (number >= 10 && number <= 19) {
         converted += arrTeens[number - 10];
     } else {

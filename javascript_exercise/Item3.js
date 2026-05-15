@@ -9,24 +9,22 @@
 // *   *
 //*     *
 
-var height = 8;
+var height = 5;
 
 if (height % 2 !== 0) {
 
-for (var i = 0; i < height; i++) {
+for (var row = 0; row < height; row++) {
 
-    var text = "";
-    for (var j = 0; j < height; j++) {
-        // Print * on both diagonals
-        if (j == i || j == height - i - 1) {
-            text += "*";
+    var out = "";
+    for (var col = 0; col < height; col++) {
+        if (col == row || col == height - row - 1) {
+            out += "*";
         } else {
-            text += " ";
+            out += " ";
         }
     }
-        //row += "<br>";
 
-console.log(text);
+console.log(out);
 }
 } else {
     console.log("Please enter an odd number for height.");
