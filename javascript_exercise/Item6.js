@@ -29,15 +29,13 @@ var record = [{
     }]
 }];
 
-// Find the person with the highest number of skills
-var highestSkillPerson = record[0];
+var highestSkilledPerson = record[0];
 
 for (var i = 1; i < record.length; i++) {
-    if (record[i].SkillSet.length > highestSkillPerson.SkillSet.length) {
-        highestSkillPerson = record[i];
+    if (record[i].SkillSet.length > highestSkilledPerson.SkillSet.length) {
+        highestSkilledPerson = record[i];
     }
 }
-
-console.log("Name: " + highestSkillPerson.Name);
-console.log("Age: " + highestSkillPerson.Age);
+console.log("Name: " + highestSkilledPerson.Name);
+console.log("Age: " + highestSkilledPerson.Age);
 

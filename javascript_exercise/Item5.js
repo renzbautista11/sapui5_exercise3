@@ -12,18 +12,18 @@ var color = ["Blue", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow"];
 var o = ["th", "st", "nd", "rd"];
 var text = "";
 
-for (var i = 0; i < color.length; i++) {
+for (var index = 0; index < color.length; index++) {
     var ord;
     text = ""
-    if (i + 1 == 1) {
+    if (index + 1 == 1) {
         ord = o[1];
-    } else if (i + 1 == 2) {
+    } else if (index + 1 == 2) {
         ord = o[2];
-    } else if (i + 1 == 3) {
+    } else if (index + 1 == 3) {
         ord = o[3];
     } else {
         ord = o[0];
     }
-text += (i + 1) + ord + " choice is " + color[i] + ".";
+text += (index + 1) + ord + " choice is " + color[index] + ".";
 console.log(text);
 }
